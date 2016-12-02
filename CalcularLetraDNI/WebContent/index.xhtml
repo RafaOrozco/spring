@@ -1,0 +1,20 @@
+<ui:composition template="/WEB-INF/templates/plantilla.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+               xmlns:f="http://xmlns.jcp.org/jsf/core">
+   <ui:define name="title">Calculadora letra DNI</ui:define>
+   <ui:define name="content"> 
+   <h:form>
+   <h:outputLabel value="Numero: " />	
+   <h:messages for="numero" style="color:red" />
+   <h:inputText id="numero" value="#{calculadora.numero}" required="true" >
+   </h:inputText>
+    <h:commandButton value="Calcular" action="#{calculadora.calcular}" /> 	
+   
+   <br/><b> <h:outputText value="#{calculadora.letra}" /></b>
+   
+    </h:form>
+   </ui:define>
+</ui:composition>
